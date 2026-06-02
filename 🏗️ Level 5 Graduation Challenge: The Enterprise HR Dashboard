@@ -1,1 +1,25 @@
+import pandas as pd
 
+# 1. Expanded corporate enterprise dataset
+company_data = {
+    "Employee": ["Rahul", "Priya", "Amit", "Suresh", "Neha"],
+    "Department": ["Data", "DevOps", "Design", "Data", "DevOps"],
+    "Salary": [55000, 71500, 79200, 62000, 85000],
+    "Performance_Score": [4.5, 4.8, 3.9, 4.2, 4.9]
+}
+
+# 2. Convert to DataFrame
+df = pd.DataFrame(company_data)
+
+print("============ ENTERPRISE HR DASHBOARD ============")
+print(df)
+print("=================================================")
+
+# Task 1: Calculate the Total Monthly Payroll using .sum() on the "Salary" column
+total_payroll = df["Salary"].sum()
+print(f"Total Monthly Payroll Expense : Rs. {total_payroll:,}")
+
+# Task 2: Calculate the Average Performance Score using .mean() on the "Performance_Score" column
+avg_performance = df["Performance_Score"].mean()
+print(f"Company Average Performance   : {avg_performance:.2f} / 5.0")
+print("=================================================")
